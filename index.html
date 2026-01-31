@@ -57,6 +57,16 @@
   <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JH5GHW39MK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JH5GHW39MK');
+  </script>
+
   <title>SciDef: Automated Definition Extraction</title>
 
   <!-- Favicon and App Icons -->
@@ -259,11 +269,16 @@
         <div class="columns is-centered">
           <div class="column is-full">
             <h2 class="title is-3 has-text-centered">Pipeline Overview</h2>
-            <figure class="image">
-              <img src="static/images/scidef_workflow.png" alt="SciDef workflow diagram" loading="lazy">
-            </figure>
+            <div class="carousel results-carousel">
+              <div class="item">
+                <img src="static/images/scidef_poster.png" alt="SciDef taxonomy poster" loading="lazy">
+              </div>
+              <div class="item">
+                <img src="static/images/scidef_workflow.png" alt="SciDef workflow diagram" loading="lazy">
+              </div>
+            </div>
             <p class="has-text-centered is-size-6">
-              SciDef workflow: similarity metric evaluation (left) and extractor evaluation/optimization (right).
+              SciDef poster and workflow diagram.
             </p>
           </div>
         </div>
@@ -295,7 +310,11 @@
                 Human-annotated ground truth for definition extraction, including explicit/implicit definitions and
                 context windows for evaluation and DSPy training.
               </p>
-              <p><a href="https://huggingface.co/datasets/mediabiasgroup/DefExtra" target="_blank">Hugging Face dataset</a></p>
+              <p>
+                <a class="button is-dark is-rounded is-small" href="https://huggingface.co/datasets/mediabiasgroup/DefExtra" target="_blank">
+                  🤗 HF Dataset
+                </a>
+              </p>
               <p class="is-size-7 has-text-grey">
                 Note: the public release ships markers only; hydration is required using your own PDFs.
               </p>
@@ -308,7 +327,11 @@
                 Human-labeled definition similarity dataset with Task A (definition/context pairs) and Task B (paper-level
                 extraction quality), used to validate evaluation metrics.
               </p>
-              <p><a href="https://huggingface.co/datasets/mediabiasgroup/DefSim" target="_blank">Hugging Face dataset</a></p>
+              <p>
+                <a class="button is-dark is-rounded is-small" href="https://huggingface.co/datasets/mediabiasgroup/DefSim" target="_blank">
+                  🤗 HF Dataset
+                </a>
+              </p>
             </div>
           </div>
         </div>
