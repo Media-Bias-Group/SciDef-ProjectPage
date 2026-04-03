@@ -186,6 +186,16 @@
   </button>
 
   <main id="main-content">
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <div class="item">
+            <img src="static/images/social_preview.png" style="width: 70%; margin: 0 auto; display: block;" alt="SciDef overview teaser figure" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="hero">
       <div class="hero-body">
         <div class="container is-max-desktop">
@@ -265,6 +275,48 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
+            <h2 class="title is-3">Highlights</h2>
+            <div class="content has-text-justified">
+              <ul>
+                <li>SciDef automates definition extraction from academic literature with large language models.</li>
+                <li>The pipeline compares one-step, multi-step, and DSPy-optimized prompting strategies.</li>
+                <li>DefExtra contributes 268 human-extracted definitions from 75 papers across media bias and out-of-domain sources.</li>
+                <li>DefSim adds human labels for definition similarity and paper-level extraction quality.</li>
+                <li>NLI-based similarity provides the most reliable evaluation signal for matching extracted definitions.</li>
+                <li>The public DefExtra release ships markers only and can be hydrated with your own PDFs.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3 has-text-centered">Figures</h2>
+          <div class="carousel results-carousel">
+            <div class="item">
+              <img src="static/images/scidef_poster.png" alt="SciDef taxonomy poster" loading="lazy">
+              <h2 class="subtitle has-text-centered">
+                Overview poster of the SciDef task, datasets, and evaluation setup.
+              </h2>
+            </div>
+            <div class="item">
+              <img src="static/images/scidef_workflow.png" alt="SciDef workflow diagram" loading="lazy">
+              <h2 class="subtitle has-text-centered">
+                SciDef workflow from keyword selection through extraction and evaluation.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
@@ -278,112 +330,6 @@
               </p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column is-full">
-            <h2 class="title is-3 has-text-centered">Pipeline Overview</h2>
-            <div class="carousel results-carousel">
-              <div class="item">
-                <img src="static/images/scidef_poster.png" alt="SciDef taxonomy poster" loading="lazy">
-              </div>
-              <div class="item">
-                <img src="static/images/scidef_workflow.png" alt="SciDef workflow diagram" loading="lazy">
-              </div>
-            </div>
-            <p class="has-text-centered is-size-6">
-              SciDef poster and workflow diagram.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Key Contributions</h2>
-        <div class="content">
-          <ul>
-            <li>LLM-based definition extraction pipeline with one-step, multi-step, and DSPy-optimized prompts.</li>
-            <li>DefExtra: 268 human-extracted definitions from 75 papers (media bias + out-of-domain).</li>
-            <li>DefSim: human-labeled definition similarity dataset for validating evaluation metrics.</li>
-            <li>Robust NLI-based evaluation for set-level definition matching and DSPy training.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section hero is-light">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Datasets</h2>
-        <div class="columns">
-          <div class="column">
-            <div class="content">
-              <h3 class="title is-5">DefExtra</h3>
-              <p>
-                Human-annotated ground truth for definition extraction, including explicit/implicit definitions and
-                context windows for evaluation and DSPy training.
-              </p>
-              <p>
-                <a class="button is-dark is-rounded is-small" href="https://huggingface.co/datasets/mediabiasgroup/DefExtra" target="_blank">
-                  🤗 HF Dataset
-                </a>
-              </p>
-              <p class="is-size-7 has-text-grey">
-                Note: the public release ships markers only; hydration is required using your own PDFs.
-              </p>
-            </div>
-          </div>
-          <div class="column">
-            <div class="content">
-              <h3 class="title is-5">DefSim</h3>
-              <p>
-                Human-labeled definition similarity dataset with Task A (definition/context pairs) and Task B (paper-level
-                extraction quality), used to validate evaluation metrics.
-              </p>
-              <p>
-                <a class="button is-dark is-rounded is-small" href="https://huggingface.co/datasets/mediabiasgroup/DefSim" target="_blank">
-                  🤗 HF Dataset
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Resources</h2>
-        <div class="buttons is-centered">
-          <a class="button is-dark is-rounded" href="https://github.com/Media-Bias-Group/SciDef" target="_blank">
-            <span class="icon"><i class="fab fa-github"></i></span>
-            <span>Code</span>
-          </a>
-          <a class="button is-dark is-rounded" href="https://github.com/Media-Bias-Group/SciDef/tree/main/docs" target="_blank">
-            <span class="icon"><i class="fas fa-book"></i></span>
-            <span>Docs</span>
-          </a>
-          <a class="button is-dark is-rounded" href="https://github.com/Media-Bias-Group/SciDef/blob/main/APPENDIX.md" target="_blank">
-            <span class="icon"><i class="fas fa-chart-bar"></i></span>
-            <span>Appendix</span>
-          </a>
-          <a class="button is-dark is-rounded" href="https://huggingface.co/datasets/mediabiasgroup/DefExtra" target="_blank">
-            <span class="icon"><i class="fas fa-database"></i></span>
-            <span>DefExtra</span>
-          </a>
-          <a class="button is-dark is-rounded" href="https://huggingface.co/datasets/mediabiasgroup/DefSim" target="_blank">
-            <span class="icon"><i class="fas fa-database"></i></span>
-            <span>DefSim</span>
-          </a>
-          <a class="button is-dark is-rounded" href="https://doi.org/10.5281/zenodo.18501198" target="_blank">
-            <span class="icon"><i class="fas fa-link"></i></span>
-            <span>Zenodo</span>
-          </a>
         </div>
       </div>
     </section>
