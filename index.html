@@ -58,13 +58,24 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JH5GHW39MK"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WZXEF0HHN1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-JH5GHW39MK');
+    const host = window.location.hostname;
+    const pathParts = window.location.pathname.split('/').filter(Boolean);
+    const projectSlug =
+      document.querySelector('meta[name="ga-project-slug"]')?.content ||
+      pathParts[0] ||
+      host;
+
+    gtag('config', 'G-WZXEF0HHN1', {
+      page_location: window.location.href,
+      page_title: document.title,
+      project_slug: projectSlug
+    });
   </script>
 
   <title>SciDef: Automated Definition Extraction</title>
