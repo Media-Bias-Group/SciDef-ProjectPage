@@ -313,6 +313,14 @@ body {
   height: auto;
 }
 
+.results-carousel .poster-crop {
+  overflow: hidden;
+}
+
+.results-carousel .item .poster-crop img {
+  margin-top: -8.4%;
+}
+
 .results-carousel .subtitle {
   font-size: 1rem !important;
   color: var(--text-secondary);
@@ -787,4 +795,3 @@ a:focus {
     box-shadow: none !important;
   }
 }
-
