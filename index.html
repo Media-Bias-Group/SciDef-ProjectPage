@@ -170,7 +170,7 @@
     "url": "https://github.com/Media-Bias-Group/SciDef",
     "image": "static/images/social_preview.png",
     "keywords": ["definition extraction", "scientific literature", "LLMs", "NLI", "DSPy", "datasets"],
-    "abstract": "Definitions are the foundation for any scientific work, but as publication volumes grow, gathering relevant definitions has become increasingly challenging. SciDef provides an LLM-based pipeline and resources for automated definition extraction. We introduce DefExtra and DefSim datasets and show that multi-step prompting and DSPy optimization improve extraction performance, while NLI-based similarity yields the most reliable evaluations.",
+    "abstract": "SciDef provides datasets and tools for extracting definitions from scientific literature. DefExtra contains 268 human-validated definitions from 75 papers, while DefSim contains 60 human-rated definition pairs. The pipeline supports PDF preprocessing, chunking, LLM extraction, prompt optimization, and evaluation. Benchmarks across 16 language models show a tradeoff between extraction quality and coverage: the highest-coverage setting finds at least one candidate for 86.4% of gold definitions but produces excess candidates. NLI-based similarity agrees strongly with human judgments, and relevance filtering remains a key challenge.",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "sameAs": [
@@ -350,13 +350,13 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Definitions are the foundation for any scientific work, but with the significant increase in publication
-                numbers, gathering definitions relevant to any keyword has become increasingly challenging. We therefore
-                introduce SciDef, an LLM-based pipeline and resource for automated definition extraction. We test SciDef
-                on DefExtra and DefSim, specifically created datasets of human-extracted definitions and human-labeled
-                definition similarity, respectively. Evaluating multiple language models across prompting strategies and
-                similarity metrics, we show that multi-step and DSPy-optimized prompting improve extraction performance
-                and that NLI-based similarity yields the most reliable evaluation.
+                SciDef provides datasets and tools for extracting definitions from scientific literature. DefExtra contains
+                268 human-validated definitions from 75 papers, while DefSim contains 60 human-rated definition pairs.
+                The pipeline supports PDF preprocessing, chunking, LLM extraction, prompt optimization, and evaluation.
+                Benchmarks across 16 language models show a tradeoff between extraction quality and coverage: the
+                highest-coverage setting finds at least one candidate for 86.4% of gold definitions but produces excess
+                candidates. NLI-based similarity agrees strongly with human judgments, and relevance filtering remains
+                a key challenge.
               </p>
             </div>
           </div>
