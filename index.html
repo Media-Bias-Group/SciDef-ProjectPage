@@ -18,10 +18,10 @@
   <meta property="og:title" content="SciDef: Datasets and Tools for Automated Definition Extraction from Scientific Literature with LLMs">
   <meta property="og:description" content="Accepted at KEIR @ CIKM 2026, SciDef provides datasets and tools for automated definition extraction from scientific literature.">
   <meta property="og:url" content="https://github.com/Media-Bias-Group/SciDef">
-  <meta property="og:image" content="static/images/scidef_workflow.png">
-  <meta property="og:image:width" content="3304">
-  <meta property="og:image:height" content="1440">
-  <meta property="og:image:alt" content="SciDef workflow diagram">
+  <meta property="og:image" content="static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SciDef workflow preview">
   <meta property="article:published_time" content="2026-01-30T00:00:00.000Z">
   <meta property="article:author" content="Filip Kučera">
   <meta property="article:section" content="Research">
@@ -32,8 +32,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="SciDef: Datasets and Tools for Automated Definition Extraction from Scientific Literature with LLMs">
   <meta name="twitter:description" content="Accepted at KEIR @ CIKM 2026, SciDef provides datasets and tools for automated definition extraction from scientific literature.">
-  <meta name="twitter:image" content="static/images/scidef_workflow.png">
-  <meta name="twitter:image:alt" content="SciDef workflow diagram">
+  <meta name="twitter:image" content="static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="SciDef workflow preview">
 
   <!-- Academic/Research Specific -->
   <meta name="citation_title" content="SciDef: Datasets and Tools for Automated Definition Extraction from Scientific Literature with LLMs">
@@ -54,6 +54,7 @@
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
   <!-- Google tag (gtag.js) -->
@@ -89,10 +90,14 @@
   <link rel="stylesheet" href="static/css/index.css">
 
   <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
   <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
@@ -101,7 +106,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
 
   <!-- Structured Data for Academic Papers -->
@@ -160,9 +168,9 @@
       "url": "https://keir-workshop.github.io/"
     },
     "url": "https://github.com/Media-Bias-Group/SciDef",
-    "image": "static/images/scidef_workflow.png",
+    "image": "static/images/social_preview.png",
     "keywords": ["definition extraction", "scientific literature", "LLMs", "NLI", "DSPy", "datasets"],
-    "abstract": "SciDef provides datasets and tools for extracting definitions from scientific literature. DefExtra contains 268 human-validated definitions from 75 papers, while DefSim contains 60 human-rated definition pairs. The pipeline supports PDF preprocessing, chunking, LLM extraction, prompt optimization, and evaluation. Benchmarks across 16 language models show a tradeoff between extraction quality and coverage: the highest-coverage setting finds at least one candidate for 86.4% of gold definitions but produces excess candidates. NLI-based similarity agrees strongly with human judgments, and relevance filtering remains a key challenge.",
+    "abstract": "Definitions are the foundation for any scientific work, but as publication volumes grow, gathering relevant definitions has become increasingly challenging. SciDef provides an LLM-based pipeline and resources for automated definition extraction. We introduce DefExtra and DefSim datasets and show that multi-step prompting and DSPy optimization improve extraction performance, while NLI-based similarity yields the most reliable evaluations.",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "sameAs": [
@@ -193,7 +201,7 @@
       <div class="hero-body">
         <div class="container">
           <div class="item">
-            <img src="static/images/scidef_workflow.png" style="width: 70%; margin: 0 auto; display: block;" alt="SciDef workflow diagram" loading="lazy">
+            <img src="static/images/social_preview.png" style="width: 70%; margin: 0 auto; display: block;" alt="SciDef overview teaser figure" loading="lazy">
           </div>
         </div>
       </div>
@@ -317,11 +325,9 @@
       <div class="hero-body">
         <div class="container is-max-desktop">
           <h2 class="title is-3 has-text-centered">Figures</h2>
-          <div class="results-figures">
+          <div class="carousel results-carousel">
             <div class="item">
-              <div class="poster-crop">
-                <img src="static/images/scidef_poster.png" alt="SciDef definition extraction poster diagram" loading="lazy">
-              </div>
+              <img src="static/images/scidef_poster.png" alt="SciDef taxonomy poster" loading="lazy">
               <h2 class="subtitle has-text-centered">
                 Overview poster of the SciDef task, datasets, and evaluation setup.
               </h2>
@@ -344,13 +350,13 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                SciDef provides datasets and tools for extracting definitions from scientific literature. DefExtra contains
-                268 human-validated definitions from 75 papers, while DefSim contains 60 human-rated definition pairs.
-                The pipeline supports PDF preprocessing, chunking, LLM extraction, prompt optimization, and evaluation.
-                Benchmarks across 16 language models show a tradeoff between extraction quality and coverage: the
-                highest-coverage setting finds at least one candidate for 86.4% of gold definitions but produces excess
-                candidates. NLI-based similarity agrees strongly with human judgments, and relevance filtering remains
-                a key challenge.
+                Definitions are the foundation for any scientific work, but with the significant increase in publication
+                numbers, gathering definitions relevant to any keyword has become increasingly challenging. We therefore
+                introduce SciDef, an LLM-based pipeline and resource for automated definition extraction. We test SciDef
+                on DefExtra and DefSim, specifically created datasets of human-extracted definitions and human-labeled
+                definition similarity, respectively. Evaluating multiple language models across prompting strategies and
+                similarity metrics, we show that multi-step and DSPy-optimized prompting improve extraction performance
+                and that NLI-based similarity yields the most reliable evaluation.
               </p>
             </div>
           </div>
