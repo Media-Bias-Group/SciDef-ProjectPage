@@ -283,13 +283,15 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
-.results-carousel {
-  overflow: hidden;
+.results-figures {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 1rem 0;
 }
 
-.results-carousel .item {
-  margin: 1rem;
+.results-figures .item {
   overflow: hidden;
   padding: 1.5rem;
   font-size: 0;
@@ -300,28 +302,28 @@ body {
   border: 1px solid var(--border-color);
 }
 
-.results-carousel .item:hover {
+.results-figures .item:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }
 
-.results-carousel .item img,
-.results-carousel video {
+.results-figures .item img,
+.results-figures video {
   margin: 0;
   border-radius: var(--border-radius);
   width: 100%;
   height: auto;
 }
 
-.results-carousel .poster-crop {
+.results-figures .poster-crop {
   overflow: hidden;
 }
 
-.results-carousel .item .poster-crop img {
+.results-figures .item .poster-crop img {
   margin-top: -8.4%;
 }
 
-.results-carousel .subtitle {
+.results-figures .subtitle {
   font-size: 1rem !important;
   color: var(--text-secondary);
   margin-top: 1rem;
@@ -689,8 +691,7 @@ code {
     top: auto;
   }
   
-  .results-carousel .item {
-    margin: 0.5rem;
+  .results-figures .item {
     padding: 1rem;
   }
   
